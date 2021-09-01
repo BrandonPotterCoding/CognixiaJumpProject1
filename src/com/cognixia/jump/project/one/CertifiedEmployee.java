@@ -8,20 +8,25 @@ public class CertifiedEmployee extends Employee {
 	
 	private OvertimeOptions option;
 	
+	
 	public CertifiedEmployee() {
 		super();
 	}
+	
 	public CertifiedEmployee(int iD, String name, String occupation, Department department, OvertimeOptions option) {
 		super(iD,name,occupation,department);
 		this.setOption(option);
 	}
+	//creates easy transition between Employee to Certified Employee
 	public CertifiedEmployee(Employee e, OvertimeOptions option) {
 		super(e.getiD(),e.getName(),e.getOccupation(),e.getDepartment());
 		this.setOption(option);
 	}
+	
 	public OvertimeOptions getOption() {
 		return option;
 	}
+	
 	public void setOption(OvertimeOptions option) {
 		this.option = option;
 	}
